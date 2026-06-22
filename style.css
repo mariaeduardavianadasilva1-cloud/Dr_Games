@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-principal: #05aff2;
+    --azul-escuro: #060b27;
+    --azul-escuro-medio:#1a2a6e;
+    --azul-medio: #1772b6;
+    --rosa-principal: #f2059f;
+    --rosa-segundario: #4a1040;
+    --roxo: #822bd9;
+    --preto: #06050e;
+    --branco-principal: #fff;
+    --branco-segundario:#D9D9D9;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: 
+        radial-gradient(ellipse at top left, var(--azul-escuro-medio) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom right, var(--rosa-segundario) 0%, transparent 60%),
+       var(--azul-escuro);
+} 
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: var(--branco-principal);
+    border: 1px solid var(--branco-segundario);
+}
+
+.logoHeader img {
+    width: 55px;
+    height: auto;
+}
+
+nav {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.link:hover {
+    color:var(--rosa-principal);
+}
+
+details{
+    position: relative;
+}
+
+.dropdown{
+    position:absolute;
+    top: 30%;
+    left: 0;
+    background-color: var(--branco-principal);
+    border: 1px solid var(--branco-segundario);
+    border-radius: 8px;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dropdown .link {
+    padding: 3px 20px;
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+summary:hover {
+    color: var(--rosa-principal);
+}
+
+.search {
+    position: relative;
+}
+
+.search input {
+    width: 280px;
+    height: 38px;
+    border-radius: 20px;
+    padding: 0 40px 0 15px;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(to right, var(--rosa-principal), var(--azul-principal)) border-box;
+    outline: none;
+}
+
+.search i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a52a90;
+    cursor: pointer;
+}
+
+footer{
+    background: var(--branco-principal);
+    width: 100%;
+    padding: 40px 60px 0 60px;
+    margin-top: auto;
+}
+
+.footerTodo{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 70px;
+    padding-top: 45px;
+    padding-bottom: 30px;
+}
+
+.logoFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 220px;
+}
+
+.logoFooter img{
+    width: 55px;
+    height: auto;
+}
+
+.logoFooter h3{
+    font-family: 'Orbitron', sans-serif;
+    color: var(--preto);
+    font-size: 20px;
+}
+
+.logoFooter p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.logoTitulo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.redesSociais {
+    display: flex;
+    gap: 12px;
+}
+
+.redesSociais a {
+    color: var(--rosa-principal);
+    font-size: 20px;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footerLinks h5 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.footerLinks .link {
+    font-size: 14px;
+}
+
+.footerContato {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footerEndereco, .footerTelefone, .footerEmail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.footerEndereco i, .footerTelefone i, .footerEmail i {
+    color: var(--rosa-principal);
+    margin-top: 2px;
+}
+
+.footerHorario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footerHorario h5 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.horarioItem {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.fechado {
+    color: red;
+}
+
+.footerCopyright {
+    width: 100%;
+    border-top: 2px solid #999999;
+    margin-top: 20px;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerCopyright div {
+    display: flex;
+    gap: 20px;
+}
+
+.footerCopyright .link {
+    font-size: 13px;
+}
