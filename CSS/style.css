@@ -7,14 +7,23 @@
 :root {
     --azul-principal: #05aff2;
     --azul-escuro: #060b27;
-    --azul-escuro-medio:#1a2a6e;
+    --azul-escuro-medio: #1a2a6e;
     --azul-medio: #1772b6;
     --rosa-principal: #f2059f;
     --rosa-segundario: #4a1040;
+    --rosa-medio: #8C0368;
     --roxo: #822bd9;
     --preto: #06050e;
     --branco-principal: #fff;
-    --branco-segundario:#D9D9D9;
+    --branco-segundario: #D9D9D9;
+}
+
+/*ISSO É A FONTE CUBEST, ELA TA NA PASTA DE ASSETS*/
+@font-face {
+    font-family: "Cubest";
+    src: url("../Assets/cubest/Cubest-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*<weight>: Use a value from 100 to 900*/
@@ -28,11 +37,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: 
+    background:
         radial-gradient(ellipse at top left, var(--azul-escuro-medio) 0%, transparent 60%),
         radial-gradient(ellipse at bottom right, var(--rosa-segundario) 0%, transparent 60%),
-       var(--azul-escuro);
-} 
+        var(--azul-escuro);
+}
 
 /*------------------------------HEADER E FOOTER----------------------------------*/
 
@@ -71,15 +80,15 @@ nav {
 }
 
 .link:hover {
-    color:var(--rosa-principal);
+    color: var(--rosa-principal);
 }
 
-details{
+details {
     position: relative;
 }
 
-.dropdown{
-    position:absolute;
+.dropdown {
+    position: absolute;
     top: 30%;
     left: 0;
     background-color: var(--branco-principal);
@@ -89,7 +98,7 @@ details{
     display: flex;
     flex-direction: column;
     gap: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown .link {
@@ -131,18 +140,18 @@ summary:hover {
     cursor: pointer;
 }
 
-footer{
+footer {
     background: var(--branco-principal);
     width: 100%;
     padding: 40px 60px 0 60px;
     margin-top: auto;
 }
 
-.footerTodo{
+.footerTodo {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 70px;
     padding-top: 45px;
@@ -156,12 +165,12 @@ footer{
     max-width: 220px;
 }
 
-.logoFooter img{
+.logoFooter img {
     width: 55px;
     height: auto;
 }
 
-.logoFooter h3{
+.logoFooter h3 {
     font-family: 'Orbitron', sans-serif;
     color: var(--preto);
     font-size: 20px;
@@ -172,7 +181,7 @@ footer{
     line-height: 1.5;
 }
 
-.logoTitulo{
+.logoTitulo {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -209,14 +218,18 @@ footer{
     gap: 14px;
 }
 
-.footerEndereco, .footerTelefone, .footerEmail {
+.footerEndereco,
+.footerTelefone,
+.footerEmail {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     font-size: 14px;
 }
 
-.footerEndereco i, .footerTelefone i, .footerEmail i {
+.footerEndereco i,
+.footerTelefone i,
+.footerEmail i {
     color: var(--rosa-principal);
     margin-top: 2px;
 }
@@ -262,4 +275,45 @@ footer{
     font-size: 13px;
 }
 
-/*--------------------------------------------------------------------*/
+/*----------------------------PÁGINA FALE CONOSCO----------------------------------------*/
+
+/*hero da fale conosco*/
+.hero-faleConosco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 80px 10%;
+    /*padding de 80px e 10% significa o tamanho do espaçamento em relação ao tamanho da tela*/
+}
+
+.heroImagem-faleConosco img {
+    width: 250px;
+}
+
+.heroTexto-faleConosco {
+    max-width: 900px;
+    /*definindo o tamanho máximo do texto*/
+}
+
+.heroTexto-faleConosco h1 {
+    font-family: "Cubest", sans-serif;
+    font-size: 72px;
+    color: var(--branco-principal);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.heroTexto-faleConosco h1 span {
+    background: linear-gradient(to left,
+            var(--azul-medio) 38%,
+            var(--rosa-medio) 100%);
+
+    /* background clip faz o gradiente aparecer só no texto */
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    /* transforma a cor do texto em transparente para que o gradiente apareça */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
