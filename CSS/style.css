@@ -21,7 +21,7 @@
 /*ISSO É A FONTE CUBEST, ELA TA NA PASTA DE ASSETS*/
 @font-face {
     font-family: "Cubest";
-    src: url("../Assets/cubest/Cubest-Bold.otf") format("opentype");
+    src: url("../Assets/fontes/Cubest-Bold.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
