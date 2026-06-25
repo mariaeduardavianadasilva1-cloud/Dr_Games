@@ -66,12 +66,12 @@ nav {
     margin-left: 20px;
 }
 
-.navLinks {
+/* .navLinks {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-}
+} */
 
 .link {
     text-decoration: none;
