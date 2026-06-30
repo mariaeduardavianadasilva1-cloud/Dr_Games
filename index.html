@@ -21,8 +21,14 @@
             <img src="Assets/Logo-Dr.Games.svg" alt="Logo">
         </div>
 
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav>
-            <div class="navLinks">
+            <div class="navLinks" id="navLinks">
 
                 <a href="index.html" class="link">Home</a>
 
@@ -43,16 +49,18 @@
             </div>
         </nav>
 
-        <div class="search">
-            <input type="text" placeholder="Pesquisar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+        <form class="search" id="searchForm" action="busca.html" method="GET">
+            <input type="text" name="q" id="searchInput" placeholder="Pesquisar">
+            <button type="submit" class="search-btn" aria-label="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
 
     </header>
-    <!--Inicio da Home -->
-    
 
-
+    <main>
+        <!-- Conteúdo das páginas continua aqui -->
+    </main>
 
     <footer>
         <div class="footerTodo">
@@ -86,11 +94,11 @@
                 </div>
                 <div class="footerTelefone">
                     <i class="fa-solid fa-phone"></i>
-                    <p>+55 (11) 99999-9999</p>
+                    <p>+55 (11) 97069-4328</p>
                 </div>
                 <div class="footerEmail">
                     <i class="fa-solid fa-envelope"></i>
-                    <p>contato@drgames.com</p>
+                    <p>drgames615@gmail.com</p>  
                 </div>
             </div>
 
@@ -119,6 +127,8 @@
         </div>
 
     </footer>
-</body>
 
+    <script src="JS/header.js"></script>
+
+</body>
 </html>

@@ -25,6 +25,14 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.jost-fontJost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
  
 /*<weight>: Use a value from 100 to 900*/
 /*<uniquifier>: Use a unique and descriptive class name*/
@@ -47,40 +55,91 @@ body {
  
 header {
     width: 100%;
-    height: 70px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+    justify-content: flex-start;
+    padding: 10px 16px;
     background-color: var(--branco-principal);
     border: 1px solid var(--branco-secundario);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+} 
+
+.logoHeader {
+    order: 1;
 }
  
 .logoHeader img {
-    width: 55px;
+    width: 45px;
     height: auto;
 }
  
-nav {
-    flex: 1;
-    margin-left: 20px;
-}
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> f79e89dbcf5687da89b34676070fb444030d57a1
-/* .navLinks {
+.hamburger {
+    width: 28px;
+    height: 22px;
+    background: none;
+    border: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-} */
-<<<<<<< HEAD
- 
-=======
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0;
+    order: 3;
+    margin-left: 10px;
+}
 
->>>>>>> f79e89dbcf5687da89b34676070fb444030d57a1
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--preto);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.is-active span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
+nav {
+    flex: 1 1 100%;
+    margin-left: 0;
+    order: 3;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%;
+}
+
+.navLinks.is-open {
+    max-height: 500px;
+}
+
+.navLinks .link {
+    width: 100%;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--branco-secundario);
+}
+ 
+
 .link {
     text-decoration: none;
     color: #000;
@@ -93,30 +152,36 @@ nav {
  
 details {
     position: relative;
+    width: 100%;
 }
  
 .dropdown {
-    position: absolute;
-    top: 30%;
-    left: 0;
+    position: static;
+    top: auto;
+    left: auto;
     background-color: var(--branco-principal);
-    border: 1px solid var(--branco-secundario);
-    border-radius: 8px;
-    padding: 5px 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
  
 .dropdown .link {
-    padding: 3px 20px;
+    padding: 10px 20px;
 }
  
 summary {
     list-style: none;
     cursor: pointer;
     font-size: 16px;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--branco-secundario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
  
 summary:hover {
@@ -125,10 +190,15 @@ summary:hover {
  
 .search {
     position: relative;
+    order: 2;
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
 }
  
 .search input {
-    width: 280px;
+    width: 100%;
     height: 38px;
     border-radius: 20px;
     padding: 0 40px 0 15px;
@@ -139,19 +209,22 @@ summary:hover {
     outline: none;
 }
  
-.search i {
+.search i,
+.search-btn {
     position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
     color: #a52a90;
     cursor: pointer;
+    background: none;
+    border: none;
 }
  
 footer {
     background: var(--branco-principal);
     width: 100%;
-    padding: 40px 60px 0 60px;
+    padding: 30px 20px 0 20px;
     margin-top: auto;
 }
  
@@ -159,10 +232,11 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 70px;
-    padding-top: 45px;
+    gap: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
 }
  
@@ -170,18 +244,18 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-width: 220px;
+    max-width: 100%;
 }
  
 .logoFooter img {
-    width: 55px;
+    width: 45px;
     height: auto;
 }
  
 .logoFooter h3 {
     font-family: 'Orbitron', sans-serif;
     color: var(--preto);
-    font-size: 20px;
+    font-size: 18px;
 }
  
 .logoFooter p {
@@ -268,10 +342,12 @@ footer {
     width: 100%;
     border-top: 2px solid #999999;
     margin-top: 20px;
-    padding: 15px 60px;
+    padding: 15px 0;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
  
 .footerCopyright div {
@@ -284,36 +360,50 @@ footer {
 }
  
 /*----------------------------PÁGINA FALE CONOSCO----------------------------------------*/
+/*--------------------VERSAO MOBILE FIRST-------------------*/
  
 /*hero da fale conosco*/
 .hero-faleConosco {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
-    padding: 80px 10%;
-    /*padding de 80px e 10% significa o tamanho do espaçamento em relação ao tamanho da tela*/
+    gap: 10px;
+    padding: 5px 5px;
+    /*padding Significa o tamanho do espaçamento em relação ao tamanho da tela*/
+    gap: 40px;
+    padding: 40px 6%;
 }
  
 .heroImagem-faleConosco img {
-    width: 312px;
-    height: 209px;
+    width: 100%;
+    max-width: 312px;
+    height: auto;
+    width: 80px;
 }
  
 .heroTexto-faleConosco {
-    max-width: 900px;
+    flex: 2;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
     /*definindo o tamanho máximo do texto*/
 }
  
 .heroTexto-faleConosco h1 {
     font-family: "Cubest", sans-serif;
-    font-size: 72px;
+    font-size: 17px;
+    text-align: center;
+    font-size: 36px;
     color: var(--branco-principal);
-    margin-bottom: 20px;
-    line-height: 1.2;
+    margin-bottom: 8px;
+    
 }
  
 .heroTexto-faleConosco h1 span {
+    font-size: 17px;
     background: linear-gradient(to left,
             var(--azul-medio) 38%,
             var(--rosa-medio) 100%);
@@ -324,5 +414,103 @@ footer {
  
     /* transforma a cor do texto em transparente para que o gradiente apareça */
     color: transparent;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparente;
 }
+
+
+.heroTexto-faleConosco p {
+    color: var(--branco-principal);
+    font-size: 9px;
+    line-height: 1;
+    font-family: "Jost", sans-serif;
+}
+
+/*------------------------- SECAO DOS CARDS -FALE CONOSCO----------*/
+
+.blocosContato-faleConosco {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px 40px;
+}
+
+.cartaoContatoFaleConosco {
+    margin-top: 25px;
+}
+
+.formsFaleConosco, .cartaoContatoFaleConosco {
+    display: flex;
+    flex-direction: column;
+    background: var(--azul-escuro);
+    border: 3px solid transparent;
+    border-radius: 23px;
+    background:
+    linear-gradient( var(--azul-escuro), var(--azul-escuro)) padding-box,
+    linear-gradient(to top, var(--azul-medio) 0%, var(--rosa-medio) 100%) border-box;
+
+    padding: 15px;
+}
+
+
+/*--Titulos e paragrafos dos cards - fale conosco--*/
+
+.formsFaleConosco h3, .cartaoContatoFaleConosco h3 {
+    color: var(--branco-principal);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.formsFaleConosco > p, .cartaoContatoFaleConosco > p {
+    color: var(--rosa-medio);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/*--forms envie mensagem - fale conosco--*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-faleConosco {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.telefoneEAssunto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-faleConosco label {
+    color: var(--branco-principal);
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.campo-faleConosco input, .campo-faleConosco textarea {
+    width: 100%;
+    padding: 5px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--branco-secundario);
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+}
+
+/*---Botoes---*/
