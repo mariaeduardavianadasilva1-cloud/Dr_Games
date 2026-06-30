@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 :root {
     --azul-principal: #05aff2;
     --azul-escuro: #060b27;
@@ -17,7 +17,7 @@
     --branco-principal: #fff;
     --branco-secundario: #D9D9D9;
 }
-
+ 
 /*ISSO É A FONTE CUBEST, ELA TA NA PASTA DE ASSETS*/
 @font-face {
     font-family: "Cubest";
@@ -33,9 +33,10 @@
   font-style: normal;
 }
 
+ 
 /*<weight>: Use a value from 100 to 900*/
 /*<uniquifier>: Use a unique and descriptive class name*/
-
+ 
 body {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -49,9 +50,9 @@ body {
         radial-gradient(ellipse at bottom right, var(--rosa-secundario) 0%, transparent 60%),
         var(--azul-escuro);
 }
-
+ 
 /*------------------------------HEADER E FOOTER----------------------------------*/
-
+ 
 header {
     width: 100%;
     height: 70px;
@@ -62,16 +63,17 @@ header {
     background-color: var(--branco-principal);
     border: 1px solid var(--branco-secundario);
 }
-
+ 
 .logoHeader img {
     width: 55px;
     height: auto;
 }
-
+ 
 nav {
     flex: 1;
     margin-left: 20px;
 }
+ 
 
 /* .navLinks {
     display: flex;
@@ -79,21 +81,22 @@ nav {
     align-items: center;
     gap: 30px;
 } */
+ 
 
 .link {
     text-decoration: none;
     color: #000;
     font-size: 16px;
 }
-
+ 
 .link:hover {
     color: var(--rosa-principal);
 }
-
+ 
 details {
     position: relative;
 }
-
+ 
 .dropdown {
     position: absolute;
     top: 30%;
@@ -107,25 +110,25 @@ details {
     gap: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .dropdown .link {
     padding: 3px 20px;
 }
-
+ 
 summary {
     list-style: none;
     cursor: pointer;
     font-size: 16px;
 }
-
+ 
 summary:hover {
     color: var(--rosa-principal);
 }
-
+ 
 .search {
     position: relative;
 }
-
+ 
 .search input {
     width: 280px;
     height: 38px;
@@ -137,7 +140,7 @@ summary:hover {
         linear-gradient(to right, var(--rosa-principal), var(--azul-principal)) border-box;
     outline: none;
 }
-
+ 
 .search i {
     position: absolute;
     right: 15px;
@@ -146,14 +149,14 @@ summary:hover {
     color: #a52a90;
     cursor: pointer;
 }
-
+ 
 footer {
     background: var(--branco-principal);
     width: 100%;
     padding: 40px 60px 0 60px;
     margin-top: auto;
 }
-
+ 
 .footerTodo {
     max-width: 1200px;
     margin: 0 auto;
@@ -164,67 +167,67 @@ footer {
     padding-top: 45px;
     padding-bottom: 30px;
 }
-
+ 
 .logoFooter {
     display: flex;
     flex-direction: column;
     gap: 12px;
     max-width: 220px;
 }
-
+ 
 .logoFooter img {
     width: 55px;
     height: auto;
 }
-
+ 
 .logoFooter h3 {
     font-family: 'Orbitron', sans-serif;
     color: var(--preto);
     font-size: 20px;
 }
-
+ 
 .logoFooter p {
     font-size: 14px;
     line-height: 1.5;
 }
-
+ 
 .logoTitulo {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
+ 
 .redesSociais {
     display: flex;
     gap: 12px;
 }
-
+ 
 .redesSociais a {
     color: var(--rosa-principal);
     font-size: 20px;
 }
-
+ 
 .footerLinks {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-
+ 
 .footerLinks h5 {
     font-size: 14px;
     margin-bottom: 6px;
 }
-
+ 
 .footerLinks .link {
     font-size: 14px;
 }
-
+ 
 .footerContato {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
-
+ 
 .footerEndereco,
 .footerTelefone,
 .footerEmail {
@@ -233,36 +236,36 @@ footer {
     gap: 10px;
     font-size: 14px;
 }
-
+ 
 .footerEndereco i,
 .footerTelefone i,
 .footerEmail i {
     color: var(--rosa-principal);
     margin-top: 2px;
 }
-
+ 
 .footerHorario {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-
+ 
 .footerHorario h5 {
     font-size: 14px;
     margin-bottom: 6px;
 }
-
+ 
 .horarioItem {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     font-size: 14px;
 }
-
+ 
 .fechado {
     color: red;
 }
-
+ 
 .footerCopyright {
     width: 100%;
     border-top: 2px solid #999999;
@@ -272,18 +275,19 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
-
+ 
 .footerCopyright div {
     display: flex;
     gap: 20px;
 }
-
+ 
 .footerCopyright .link {
     font-size: 13px;
 }
-
+ 
 /*----------------------------PÁGINA FALE CONOSCO----------------------------------------*/
 /*--------------------VERSAO MOBILE FIRST-------------------*/
+ 
 /*hero da fale conosco*/
 .hero-faleConosco {
     display: flex;
@@ -293,12 +297,12 @@ footer {
     padding: 5px 5px;
     /*padding Significa o tamanho do espaçamento em relação ao tamanho da tela*/
 }
-
+ 
 .heroImagem-faleConosco img {
     width: 95px;
     height: 70px;
 }
-
+ 
 .heroTexto-faleConosco {
     flex: 2;
     width: 100%;
@@ -306,7 +310,7 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-
+ 
 .heroTexto-faleConosco h1 {
     font-family: "Cubest", sans-serif;
     font-size: 17px;
@@ -315,17 +319,17 @@ footer {
     margin-bottom: 8px;
     
 }
-
+ 
 .heroTexto-faleConosco h1 span {
     font-size: 17px;
     background: linear-gradient(to left,
             var(--azul-medio) 38%,
             var(--rosa-medio) 100%);
-
+ 
     /* background clip faz o gradiente aparecer só no texto */
     background-clip: text;
     -webkit-background-clip: text;
-
+ 
     /* transforma a cor do texto em transparente para que o gradiente apareça */
     color: transparent;
     -webkit-text-fill-color: transparent;
