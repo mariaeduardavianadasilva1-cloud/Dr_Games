@@ -26,6 +26,13 @@
     font-style: normal;
 }
 
+.jost-fontJost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /*<weight>: Use a value from 100 to 900*/
 /*<uniquifier>: Use a unique and descriptive class name*/
 
@@ -276,36 +283,41 @@ footer {
 }
 
 /*----------------------------PÁGINA FALE CONOSCO----------------------------------------*/
-
+/*--------------------VERSAO MOBILE FIRST-------------------*/
 /*hero da fale conosco*/
 .hero-faleConosco {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
-    padding: 80px 10%;
-    /*padding de 80px e 10% significa o tamanho do espaçamento em relação ao tamanho da tela*/
+    gap: 10px;
+    padding: 5px 5px;
+    /*padding Significa o tamanho do espaçamento em relação ao tamanho da tela*/
 }
 
 .heroImagem-faleConosco img {
-    width: 312px;
-    height: 209px;
+    width: 95px;
+    height: 70px;
 }
 
 .heroTexto-faleConosco {
-    max-width: 900px;
-    /*definindo o tamanho máximo do texto*/
+    flex: 2;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .heroTexto-faleConosco h1 {
     font-family: "Cubest", sans-serif;
-    font-size: 72px;
+    font-size: 17px;
+    text-align: left;
     color: var(--branco-principal);
-    margin-bottom: 20px;
-    line-height: 1.2;
+    margin-bottom: 8px;
+    
 }
 
 .heroTexto-faleConosco h1 span {
+    font-size: 17px;
     background: linear-gradient(to left,
             var(--azul-medio) 38%,
             var(--rosa-medio) 100%);
@@ -317,4 +329,23 @@ footer {
     /* transforma a cor do texto em transparente para que o gradiente apareça */
     color: transparent;
     -webkit-text-fill-color: transparent;
+}
+
+.heroTexto-faleConosco p {
+    color: var(--branco-principal);
+    font-size: 9px;
+    line-height: 1;
+    font-family: "Jost", sans-serif;
+}
+
+.blocosContato-faleConosco {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px 40px;
+    background-color: #05aff2;
+}
+
+.formsFaleConosco {
+    
 }
