@@ -8,18 +8,27 @@
     <!-- Ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-   <!-----------------------HEADER--------------------------->
+
     <header>
 
         <div class="logoHeader">
             <img src="Assets/Logo-Dr.Games.svg" alt="Logo">
         </div>
 
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav>
-            <div class="navLinks">
+            <div class="navLinks" id="navLinks">
 
                 <a href="index.html" class="link">Home</a>
 
@@ -40,42 +49,19 @@
             </div>
         </nav>
 
-        <div class="search">
-            <input type="text" placeholder="Pesquisar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+        <form class="search" id="searchForm" action="busca.html" method="GET">
+            <input type="text" name="q" id="searchInput" placeholder="Pesquisar">
+            <button type="submit" class="search-btn" aria-label="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
 
     </header>
 
-    
+    <main>
+        <!-- Conteúdo das páginas continua aqui -->
+    </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!----------------------------------FOOTER--------------------------->
     <footer>
         <div class="footerTodo">
             <div class="logoFooter">
@@ -108,11 +94,11 @@
                 </div>
                 <div class="footerTelefone">
                     <i class="fa-solid fa-phone"></i>
-                    <p>+55 (11) 99999-9999</p>
+                    <p>+55 (11) 97069-4328</p>
                 </div>
                 <div class="footerEmail">
                     <i class="fa-solid fa-envelope"></i>
-                    <p>contato@drgames.com</p>
+                    <p>drgames615@gmail.com</p>  
                 </div>
             </div>
 
@@ -141,6 +127,8 @@
         </div>
 
     </footer>
-</body>
 
+    <script src="JS/header.js"></script>
+
+</body>
 </html>
