@@ -365,31 +365,21 @@ footer {
 /*hero da fale conosco*/
 .hero-faleConosco {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 5px 5px;
-    /*padding Significa o tamanho do espaçamento em relação ao tamanho da tela*/
-    gap: 40px;
-    padding: 40px 6%;
+    justify-content: center;
+    gap: 18px;
+    padding: 10px 5px;
 }
  
 .heroImagem-faleConosco img {
-    width: 100%;
-    max-width: 312px;
-    height: auto;
     width: 80px;
 }
  
 .heroTexto-faleConosco {
-    flex: 2;
-    width: 100%;
-    text-align: center;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100%;
-    /*definindo o tamanho máximo do texto*/
+    text-align: center;
 }
  
 .heroTexto-faleConosco h1 {
@@ -422,6 +412,7 @@ footer {
     font-size: 9px;
     line-height: 1;
     font-family: "Jost", sans-serif;
+    font-weight: 400;
 }
 
 /*------------------------- SECAO DOS CARDS -FALE CONOSCO----------*/
@@ -513,3 +504,15 @@ form {
 }
 
 /*---Botoes---*/
+
+form button, .btnWhatsapp-faleConosco {
+    width: 85%;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(
+        to right,
+        var(--rosa-medio),
+        var(--azul-medio)
+    );
+}
