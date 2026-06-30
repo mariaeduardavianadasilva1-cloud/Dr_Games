@@ -299,8 +299,7 @@ footer {
 }
  
 .heroImagem-faleConosco img {
-    width: 95px;
-    height: 70px;
+    width: 80px;
 }
  
 .heroTexto-faleConosco {
@@ -314,7 +313,7 @@ footer {
 .heroTexto-faleConosco h1 {
     font-family: "Cubest", sans-serif;
     font-size: 17px;
-    text-align: left;
+    text-align: center;
     color: var(--branco-principal);
     margin-bottom: 8px;
     
@@ -342,14 +341,92 @@ footer {
     font-family: "Jost", sans-serif;
 }
 
+/*------------------------- SECAO DOS CARDS -FALE CONOSCO----------*/
+
 .blocosContato-faleConosco {
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 0 20px 40px;
-    background-color: #05aff2;
 }
 
-.formsFaleConosco {
-    
+.cartaoContatoFaleConosco {
+    margin-top: 25px;
 }
+
+.formsFaleConosco, .cartaoContatoFaleConosco {
+    display: flex;
+    flex-direction: column;
+    background: var(--azul-escuro);
+    border: 3px solid transparent;
+    border-radius: 23px;
+    background:
+    linear-gradient( var(--azul-escuro), var(--azul-escuro)) padding-box,
+    linear-gradient(to top, var(--azul-medio) 0%, var(--rosa-medio) 100%) border-box;
+
+    padding: 15px;
+}
+
+
+/*--Titulos e paragrafos dos cards - fale conosco--*/
+
+.formsFaleConosco h3, .cartaoContatoFaleConosco h3 {
+    color: var(--branco-principal);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.formsFaleConosco > p, .cartaoContatoFaleConosco > p {
+    color: var(--rosa-medio);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/*--forms envie mensagem - fale conosco--*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-faleConosco {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.telefoneEAssunto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-faleConosco label {
+    color: var(--branco-principal);
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.campo-faleConosco input, .campo-faleConosco textarea {
+    width: 100%;
+    padding: 5px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--branco-secundario);
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+}
+
+/*---Botoes---*/
