@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 :root {
     --azul-principal: #05aff2;
     --azul-escuro: #060b27;
@@ -17,7 +17,7 @@
     --branco-principal: #fff;
     --branco-secundario: #D9D9D9;
 }
-
+ 
 /*ISSO É A FONTE CUBEST, ELA TA NA PASTA DE ASSETS*/
 @font-face {
     font-family: "Cubest";
@@ -26,9 +26,17 @@
     font-style: normal;
 }
 
+.jost-fontJost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+ 
 /*<weight>: Use a value from 100 to 900*/
 /*<uniquifier>: Use a unique and descriptive class name*/
-
+ 
 body {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -42,9 +50,9 @@ body {
         radial-gradient(ellipse at bottom right, var(--rosa-secundario) 0%, transparent 60%),
         var(--azul-escuro);
 }
-
+ 
 /*------------------------------HEADER E FOOTER----------------------------------*/
-
+ 
 header {
     width: 100%;
     height: auto;
@@ -63,12 +71,12 @@ header {
 .logoHeader {
     order: 1;
 }
-
+ 
 .logoHeader img {
     width: 45px;
     height: auto;
 }
-
+ 
 .hamburger {
     width: 28px;
     height: 22px;
@@ -130,22 +138,23 @@ nav {
     padding: 12px 4px;
     border-bottom: 1px solid var(--branco-secundario);
 }
+ 
 
 .link {
     text-decoration: none;
     color: #000;
     font-size: 16px;
 }
-
+ 
 .link:hover {
     color: var(--rosa-principal);
 }
-
+ 
 details {
     position: relative;
     width: 100%;
 }
-
+ 
 .dropdown {
     position: static;
     top: auto;
@@ -159,11 +168,11 @@ details {
     gap: 0;
     box-shadow: none;
 }
-
+ 
 .dropdown .link {
     padding: 10px 20px;
 }
-
+ 
 summary {
     list-style: none;
     cursor: pointer;
@@ -174,11 +183,11 @@ summary {
     justify-content: space-between;
     align-items: center;
 }
-
+ 
 summary:hover {
     color: var(--rosa-principal);
 }
-
+ 
 .search {
     position: relative;
     order: 2;
@@ -187,7 +196,7 @@ summary:hover {
     display: flex;
     align-items: center;
 }
-
+ 
 .search input {
     width: 100%;
     height: 38px;
@@ -199,7 +208,7 @@ summary:hover {
         linear-gradient(to right, var(--rosa-principal), var(--azul-principal)) border-box;
     outline: none;
 }
-
+ 
 .search i,
 .search-btn {
     position: absolute;
@@ -211,14 +220,14 @@ summary:hover {
     background: none;
     border: none;
 }
-
+ 
 footer {
     background: var(--branco-principal);
     width: 100%;
     padding: 30px 20px 0 20px;
     margin-top: auto;
 }
-
+ 
 .footerTodo {
     max-width: 1200px;
     margin: 0 auto;
@@ -230,67 +239,67 @@ footer {
     padding-top: 20px;
     padding-bottom: 30px;
 }
-
+ 
 .logoFooter {
     display: flex;
     flex-direction: column;
     gap: 12px;
     max-width: 100%;
 }
-
+ 
 .logoFooter img {
     width: 45px;
     height: auto;
 }
-
+ 
 .logoFooter h3 {
     font-family: 'Orbitron', sans-serif;
     color: var(--preto);
     font-size: 18px;
 }
-
+ 
 .logoFooter p {
     font-size: 14px;
     line-height: 1.5;
 }
-
+ 
 .logoTitulo {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
+ 
 .redesSociais {
     display: flex;
     gap: 12px;
 }
-
+ 
 .redesSociais a {
     color: var(--rosa-principal);
     font-size: 20px;
 }
-
+ 
 .footerLinks {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-
+ 
 .footerLinks h5 {
     font-size: 14px;
     margin-bottom: 6px;
 }
-
+ 
 .footerLinks .link {
     font-size: 14px;
 }
-
+ 
 .footerContato {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
-
+ 
 .footerEndereco,
 .footerTelefone,
 .footerEmail {
@@ -299,36 +308,36 @@ footer {
     gap: 10px;
     font-size: 14px;
 }
-
+ 
 .footerEndereco i,
 .footerTelefone i,
 .footerEmail i {
     color: var(--rosa-principal);
     margin-top: 2px;
 }
-
+ 
 .footerHorario {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-
+ 
 .footerHorario h5 {
     font-size: 14px;
     margin-bottom: 6px;
 }
-
+ 
 .horarioItem {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     font-size: 14px;
 }
-
+ 
 .fechado {
     color: red;
 }
-
+ 
 .footerCopyright {
     width: 100%;
     border-top: 2px solid #999999;
@@ -340,57 +349,168 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
 }
-
+ 
 .footerCopyright div {
     display: flex;
     gap: 20px;
 }
-
+ 
 .footerCopyright .link {
     font-size: 13px;
 }
-
+ 
 /*----------------------------PÁGINA FALE CONOSCO----------------------------------------*/
-
+/*--------------------VERSAO MOBILE FIRST-------------------*/
+ 
 /*hero da fale conosco*/
 .hero-faleConosco {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
+    padding: 5px 5px;
+    /*padding Significa o tamanho do espaçamento em relação ao tamanho da tela*/
     gap: 40px;
     padding: 40px 6%;
 }
-
+ 
 .heroImagem-faleConosco img {
     width: 100%;
     max-width: 312px;
     height: auto;
+    width: 80px;
 }
-
+ 
 .heroTexto-faleConosco {
+    flex: 2;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
     max-width: 100%;
     /*definindo o tamanho máximo do texto*/
 }
-
+ 
 .heroTexto-faleConosco h1 {
     font-family: "Cubest", sans-serif;
+    font-size: 17px;
+    text-align: center;
     font-size: 36px;
     color: var(--branco-principal);
-    margin-bottom: 20px;
-    line-height: 1.2;
+    margin-bottom: 8px;
+    
 }
-
+ 
 .heroTexto-faleConosco h1 span {
+    font-size: 17px;
     background: linear-gradient(to left,
             var(--azul-medio) 38%,
             var(--rosa-medio) 100%);
-
+ 
     /* background clip faz o gradiente aparecer só no texto */
     background-clip: text;
     -webkit-background-clip: text;
-
+ 
     /* transforma a cor do texto em transparente para que o gradiente apareça */
     color: transparent;
     -webkit-text-fill-color: transparente;
 }
+
+
+.heroTexto-faleConosco p {
+    color: var(--branco-principal);
+    font-size: 9px;
+    line-height: 1;
+    font-family: "Jost", sans-serif;
+}
+
+/*------------------------- SECAO DOS CARDS -FALE CONOSCO----------*/
+
+.blocosContato-faleConosco {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px 40px;
+}
+
+.cartaoContatoFaleConosco {
+    margin-top: 25px;
+}
+
+.formsFaleConosco, .cartaoContatoFaleConosco {
+    display: flex;
+    flex-direction: column;
+    background: var(--azul-escuro);
+    border: 3px solid transparent;
+    border-radius: 23px;
+    background:
+    linear-gradient( var(--azul-escuro), var(--azul-escuro)) padding-box,
+    linear-gradient(to top, var(--azul-medio) 0%, var(--rosa-medio) 100%) border-box;
+
+    padding: 15px;
+}
+
+
+/*--Titulos e paragrafos dos cards - fale conosco--*/
+
+.formsFaleConosco h3, .cartaoContatoFaleConosco h3 {
+    color: var(--branco-principal);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.formsFaleConosco > p, .cartaoContatoFaleConosco > p {
+    color: var(--rosa-medio);
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/*--forms envie mensagem - fale conosco--*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-faleConosco {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.telefoneEAssunto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo-faleConosco label {
+    color: var(--branco-principal);
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.campo-faleConosco input, .campo-faleConosco textarea {
+    width: 100%;
+    padding: 5px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--branco-secundario);
+    font-family: "Jost", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+}
+
+/*---Botoes---*/
